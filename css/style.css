@@ -10,7 +10,6 @@
 /* Start Navigations */
 
 .header_area .main-menu .nav-item .nav-link{
-    font-family: var(--roboto);
     text-transform: uppercase;
     font-weight: 500;
     padding: 1.7rem;
@@ -46,9 +45,6 @@
 
 /*Start  Banner Area*/
 
-.site-main .site-banner {
-    background: url(../img/home-banner.png) no-repeat 0% 50%;
-}
 
 .site-main .site-banner .site-title h3{
     padding-top: 20%;
@@ -97,35 +93,81 @@
     width: 5%;
 }
 
+.typewriter h1 {
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
 .work-exp-container{
     margin: 2rem;
 }
 
+.paragraph {
+    cursor: pointer;
+
+}
+
 .para {
-    display: none;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .language-in-detail {
-    display: none;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 .education-detail {
-    display: none;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.cstm-icon {
+    font-size: 2rem;
+    margin: 1rem;
 }
   
 .qualifications:hover + .para {
-    display: inline-grid;
+    visibility: visible;
+    height: 100%;
+    opacity: 1;
 }
 
 .languages:hover + .language-in-detail {
-    display: block;
-}
-.languages:hover{
-    text-decoration: underline;
+    visibility: visible;
+    height: 100%;
+    opacity: 1;
 }
 
 .qualification:hover + .education-detail {
-    display: block;
+    visibility: visible;
+    height: 100%;
+    opacity: 1;
 }
 
 .work-experience{
