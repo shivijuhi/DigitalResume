@@ -20,11 +20,6 @@
     padding: 0 0 0 4rem;
 }
 
-.header_area .main-menu .collapse{
-    padding: 8px 0px 4rem 18rem;
-}
-
-
 .header_area .main-menu .navbar-nav .active a{
     background: var(--gradient-color);
     -webkit-background-clip: text;
